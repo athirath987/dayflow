@@ -10,6 +10,7 @@ export default defineConfig({
     tailwindcss(),
     VitePWA({
       registerType: 'autoUpdate',
+      includeAssets: ['favicon.svg', 'dayflow.svg', 'icons.svg'],
       manifest: {
         name: 'DayFlow - Personal Workspace',
         short_name: 'DayFlow',
@@ -17,6 +18,7 @@ export default defineConfig({
         theme_color: '#0b0d13',
         background_color: '#0b0d13',
         display: 'standalone',
+        orientation: 'portrait',
         start_url: './',
         icons: [
           {
@@ -24,6 +26,12 @@ export default defineConfig({
             sizes: 'any',
             type: 'image/svg+xml',
             purpose: 'any'
+          },
+          {
+            src: 'dayflow.svg',
+            sizes: 'any',
+            type: 'image/svg+xml',
+            purpose: 'maskable'
           }
         ]
       }
